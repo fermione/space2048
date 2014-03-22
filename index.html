@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>太空2048</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <meta property="og:title" content="galaxy game"/>
+  <meta property="og:site_name" content="galaxy game"/>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">太空2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+	<p class="game-intro">合并方块，从地球表面到太阳光球，探索<strong>空间天气</strong>的奥秘！</p>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+		<a class="keep-playing-button">继续前进</a>
+          <a class="retry-button">再试一次</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">玩法:</strong> 使用键盘 <strong>方向键</strong> 控制方块整体移动。当两个相同的方块相遇，就会 <strong>合并</strong> 成更高层的方块，成功合并出 <strong>光球</strong> 即为胜利。
+    </p>
+       <hr>
+    <p>
+      <strong class="important">说明：</strong>方块层次按照从地球表面到太阳内部的顺序排列，依次为：地面、
+      <a href="http://zh.wikipedia.org/wiki/%E5%AF%B9%E6%B5%81%E5%B1%82" target="_blank">对流层</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E5%B9%B3%E6%B5%81%E5%B1%82" target="_blank">平流层</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E5%B1%82" target="_blank">中间层</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E7%83%AD%E5%B1%82" target="_blank">热层</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E7%94%B5%E7%A6%BB%E5%B1%82" target="_blank">电离层</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E7%A3%81%E5%B1%82" target="_blank">磁层</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E8%A1%8C%E6%98%9F%E9%99%85%E7%A9%BA%E9%97%B4" target="_blank">行星际</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E6%97%A5%E5%86%95" target="_blank">日冕</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E5%85%89%E7%90%83" target="_blank">色球</a>、
+      <a href="http://zh.wikipedia.org/wiki/%E5%85%89%E7%90%83" target="_blank">光球</a> 等等。
+      其中部分层次有所重叠，详情请点击相关链接。这个游戏只要掌握一定技巧就比较简单，比如尽量把高层方块放在角落里，并将相邻层次的方块紧挨着依次摆放下去。
+       
+    </p>
+       <hr>
+    <p>
+    <strong class="important">Note:</strong>本游戏源自<a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli</a>编写的名为<a href="http://gabrielecirulli.github.io/2048/" target="_blank">2048</a>的游戏，代码改编自衍生游戏<a href="http://aenon.github.io/life/" target="_blank">life</a>，感谢作者aenon。原版2048的图文攻略参考<a href="http://jingyan.baidu.com/article/ad310e80b7d0801848f49e6e.html" target="_blank">这里</a>。</p>
+    
+  </div>
+
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_score_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+
+</body>
+</html>
